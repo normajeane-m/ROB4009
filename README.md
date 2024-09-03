@@ -5,7 +5,7 @@
 
 - 학기: 2024-2
 
-- 강사: [신현수](shs-vision.github.io)
+- 강사: [신현수](https://shs-vision.github.io)
 
 - 조교: 이성엽(ehfdlclsrn22@hanyang.ac.kr), 김도현(kdh9904@hanyang.ac.kr)
 
