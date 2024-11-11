@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot name="sphere_robot">
+
+    <!-- BASE -->
+    <link name="base">
+    </link>
+
+    <joint name="base_joint" type="fixed">
+        <parent link="base"/>
+        <child link="base_link"/>
+    </joint>
+
+    <link name="base_link">
+        <!-- 시각적 요소 -->
+        <visual>
+            <geometry>
+                <sphere radius="1"/> <!-- 반지름 1m의 구 -->
+            </geometry>
+            <material name="red">
+                <color rgba="1.0 0.0 0.0 1.0"/> <!-- 빨간색 -->
+            </material>
+        </visual>
+        <!-- 충돌 요소 -->
+        <collision>
+            <geometry>
+                <sphere radius="1"/> <!-- 충돌 감지를 위한 구 -->
+            </geometry>
+        </collision>
+    </link>
+</robot>

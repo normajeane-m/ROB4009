@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<robot name="box_robot">
+
+    <!-- BASE -->
+    <link name="base">
+    </link>
+
+    <joint name="base_joint" type="fixed">
+        <parent link="base"/>
+        <child link="base_link"/>
+    </joint>
+
+    <link name="base_link">
+        <!-- 시각적 요소 -->
+        <visual>
+          <origin xyz="0.5 0.5 0.5" />
+            <geometry>
+                <box size="1 1 1"/> <!-- 1m x 1m x 1m 크기의 박스 -->
+            </geometry>
+            <material name="grey">
+                 <color rgba="0.5 0.5 0.5 1.0"/> <!-- 회색 -->
+            </material>
+        </visual>
+        <!-- 충돌 요소 -->
+        <collision>
+          <origin xyz="0.5 0.5 0.5" />
+            <geometry>
+                <box size="1 1 1"/> <!-- 충돌 감지를 위한 박스 -->
+            </geometry>
+        </collision>
+     </link>
+</robot>

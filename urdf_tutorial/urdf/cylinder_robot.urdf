@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot name="cylinder_robot">
+
+    <!-- BASE -->
+    <link name="base">
+    </link>
+
+    <joint name="base_joint" type="fixed">
+        <parent link="base"/>
+        <child link="base_link"/>
+    </joint>
+
+    <link name="base_link">
+        <!-- 시각적 요소 -->
+        <visual>
+            <geometry>
+                <cylinder radius="0.5" length="2"/> <!-- 반지름 0.5m, 길이 2m의 원통 -->
+            </geometry>
+            <material name="blue">
+                <color rgba="0.0 0.0 1.0 1.0"/> <!-- 파란색 -->
+            </material>
+        </visual>
+        <!-- 충돌 요소 -->
+        <collision>
+            <geometry>
+                <cylinder radius="0.5" length="2"/> <!-- 충돌 감지를 위한 원통 -->
+            </geometry>
+        </collision>
+    </link>
+</robot>
