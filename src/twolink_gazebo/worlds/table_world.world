@@ -118,9 +118,6 @@
       <light name='sun'>
         <pose>0 0 10 0 -0 0</pose>
       </light>
-      <light name='user_point_light_0'>
-        <pose>0 0 10 0 -0 0</pose>
-      </light>
     </state>
     <model name='table'>
       <static>1</static>

@@ -19,6 +19,7 @@ setup(
     entry_points={
         'console_scripts': [
             'joint_publisher = twolink_gazebo.joint_publisher:main',
+            'dummy_joint_publisher = twolink_gazebo.dummy_joint_publisher:main',
         ],
     },
 )
