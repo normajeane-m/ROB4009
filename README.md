@@ -6,7 +6,7 @@
 - **Instructor:** [Hyunsoo Shin](https://shs-vision.github.io)
 - **Teaching Assistants:**  
   - Seongyeop Lee (ehfdlclsrn22@hanyang.ac.kr)  
-  - Dohyun Kim (kdh9904@hanyang.ac.kr)  
+  - Dohyeon Kim (kdh9904@hanyang.ac.kr)  
   - Jongmin Kim (jjmm0425@naver.com)  
 
 ---
