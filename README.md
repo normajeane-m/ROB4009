@@ -3,7 +3,7 @@
 - **Course Code:** ROB4009 (22698)  
 - **Course Title:** Robot Programming  
 - **Semester:** 2024-2  
-- **Instructor:** Hyunsoo Shin  
+- **Instructor:** [Hyunsoo Shin](shs-vision.github.io)
 - **Teaching Assistants:**  
   - Seongyeob Lee (ehfdlclsrn22@hanyang.ac.kr)  
   - Dohyun Kim (kdh9904@hanyang.ac.kr)  
