@@ -20,8 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'server_node = twolink_control.pub_yolo:main', 
-            'client_node = twolink_control.sub_serial:main', 
+            'command_node = twolink_control.keyboard_command:main', 
+            'serial_node = twolink_control.serial_interface:main', 
         ],
     },
 )
