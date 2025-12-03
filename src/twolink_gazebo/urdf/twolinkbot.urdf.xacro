@@ -13,7 +13,7 @@
   
   <link name="base_link">
     <visual>
-        <origin xyz="0.045 0.05 0"/>
+        <origin xyz="-0.045 -0.05 0"/>
         <geometry>
           <mesh
           filename="file://$(find twolink_gazebo)/meshes/base_link.stl" />
@@ -23,7 +23,7 @@
         </material>
     </visual>
     <collision>
-        <origin xyz="0.045 0.05 0"/>
+        <origin xyz="-0.045 -0.05 0"/>
         <geometry>
           <mesh
           filename="file://$(find twolink_gazebo)/meshes/base_link.stl" />
@@ -35,45 +35,69 @@
   </link>
 
   <!--START OF YOUR CODE-->
-  <joint name="joint1" type="">
-
+  <joint name="joint1" type="continuous">
+    <parent link="base_link"/>
+    <child link="link1"/>
+    <origin xyz="0 0 0.09435" rpy="0 0 0"/>
+    <axis xyz="0.0 0.0 1.0"/>
     <!--END OF YOUR CODE-->
   </joint>
 
   <link name="link1">
     <visual>
       <!--START OF YOUR CODE-->
-
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://$(find twolink_gazebo)/meshes/link1.stl" />
+      </geometry>
+      <material name="grey">
+          <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
       <!--END OF YOUR CODE-->
     </visual>
 
     <collision>
       <!--START OF YOUR CODE-->
-
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://$(find twolink_gazebo)/meshes/link1.stl" />
+      </geometry>   
       <!--END OF YOUR CODE-->
     </collision>
 
     <xacro:inertial_box mass="0.5" x="0.2" y="0.057" z="0.057">
             <origin xyz="-0.0715 0 0.03"/>
-    </xacro:inertial_box>
+    </xacro:inertial_box>link2
   </link>
 
   <!--START OF YOUR CODE-->
-  <joint name="joint2" type="">
-
+  <joint name="joint2" type="continuous">
+    <parent link="link1"/>
+    <child link="link2"/>
+    <origin xyz="0.143 0 0.09365" rpy="0 0 0"/>
+    <axis xyz="0.0 0.0 1.0"/>
     <!--END OF YOUR CODE-->
   </joint>
 
   <link name="link2">
     <visual>
       <!--START OF YOUR CODE-->
-
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://$(find twolink_gazebo)/meshes/link2.stl" />
+      </geometry>
+      <material name="grey">
+          <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
       <!--END OF YOUR CODE-->
     </visual>
 
     <collision>
       <!--START OF YOUR CODE-->
-
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://$(find twolink_gazebo)/meshes/link2.stl" />
+      </geometry>   
       <!--END OF YOUR CODE-->
     </collision>
 
@@ -88,11 +112,11 @@
   <joint name="fix_joint" type="fixed">
     <parent link="link2"/>
     <child link="d435_holder"/>
-    <origin xyz="-0.102 0 0.021"/>
+    <origin xyz="0.102 0 0.021"/>
   </joint>
   <link name="d435_holder">
     <visual>
-        <origin xyz="0 0 0" rpy="0 0 3.14159"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
           <mesh
           filename="file://$(find twolink_gazebo)/meshes/d435_holder.stl" />
@@ -102,7 +126,7 @@
         </material>
     </visual>
     <collision>
-        <origin xyz="0 0 0" rpy="0 0 3.14159"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
           <mesh
           filename="file://$(find twolink_gazebo)/meshes/d435_holder.stl" />
@@ -112,7 +136,7 @@
   <joint name="fix_joint2" type="fixed">
     <parent link="d435_holder"/>
     <child link="d435"/>
-    <origin xyz="0 0 0.018" rpy="0 0 3.14159"/>
+    <origin xyz="0 0 0.018" rpy="0 0 0"/>
   </joint>
   <link name="d435">
     <visual>
